@@ -1,0 +1,6 @@
+.container {
+  border: 10px solid #0000ff;
+  padding: 100px;
+  text-align: center; }
+  .container h1 {
+    color: #ff0000; }

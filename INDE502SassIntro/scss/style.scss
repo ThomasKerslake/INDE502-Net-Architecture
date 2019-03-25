@@ -1,0 +1,13 @@
+$primary-color:#ff0000;
+$secondary-color:#0000ff;
+$default-padding:100px;
+$default-border-width: $default-padding*0.1;
+
+.container{
+  border: $default-border-width solid $secondary-color;
+  padding: $default-padding;
+  text-align: center;
+  h1{
+    color: $primary-color;
+  }
+}
