@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pop</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="intro-styles.css">
+  <link rel="stylesheet" type="text/css" href="loading-overlay.css">
+</head>
+
+<body>
+
+<div class="overlay">
+    <div class="wrap">
+        <div class="load-5">
+            <div class="ring-2">
+              <div class="text"><img src="./images/Pop-loading.png" id="loading-text" alt="The Pop logo."> </div>
+                <div class="ball-holder-1">
+                    <div class="ball"></div>
+                  </div>
+                <div class="ball-holder-2">
+                  <div class="ball-2"></div>
+                  </div>
+                  <div class="ball-holder-3">
+                  <div class="ball-3"></div>
+                  </div>
+            </div>
+        </div>
+</div>
+</div>
+
+  <div class="navbox">
+  <ul class="nav justify-content-end">
+    <li class="nav-item">
+      <a class="nav-link" href="main.html"><span>Login</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="main.html"><span>Sign up</span></a>
+    </li>
+  </ul>
+</div>
+
+<div class="pure-g">
+
+    <div class="pure-u-15-24">
+      <img src="./images/Pop.png" id="brandLogo" alt="The Pop logo.">  
+    </div>
+
+    <div class="pure-u-1-9" id="sml-scrn">
+      <h1>Pop,<br> what else?</h1>
+      <h2>Tasks made easy.</h2>
+      <div class="sml-butn"><button type="button" class="butn" data-toggle="modal" data-target="#signUpModal">Sign up for free!</button></div>
+      <div class="sml-icons">
+        <i class="fab fa-twitter"></i><i class="fab fa-facebook-f"></i><i class="fab fa-github"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="alt-icons">
+    <ul>
+      <li><i class="fab fa-twitter"></i></li>
+      <li><i class="fab fa-facebook-f"></i></li>
+      <li><i class="fab fa-github"></i></li>
+    </ul>
+  </div>
+
+
+<!-------------------------Modal--------------------------->
+
+
+<!-- Modal -->
+<div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <div class="modal-body">
+        <h5 class="modal-title" id="signUpModalTitle">Welcome to Pop!</h5>
+        <form>
+          <div class="form-group">
+            <label for="User-Name" class="col-form-label">Username:</label>
+            <input type="text" class="form-control" id="User-Name">
+          </div>
+          <div class="form-group">
+            <label for="User-Email" class="col-form-label">Email:</label>
+            <input type="text" class="form-control" id="User-Email">
+          </div>
+          <div class="form-group">
+            <label for="User-Pass" class="col-form-label">Password:</label>
+            <input type="text" class="form-control" id="User-Pass">
+          </div>
+        </form>
+        <div class="modalBtn">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancle</button>
+        <button type="button" class="btn btn-success">Sign up!</button>
+      </div>
+      </div>   
+    </div>
+  </div>
+</div>
+  
+    <script src="js/sketch.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/sketch.js" type="text/javascript"></script>
+  </body>
+  </html>

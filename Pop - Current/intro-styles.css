@@ -1,0 +1,238 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body,
+html {
+	height: 100%;
+}
+
+body {
+	background-color: #35a0e1;
+	background-image: url("images/BgBlobs2.png");
+	height: 100vh;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: 'Poppins', sans-serif !important;
+}
+
+a {
+	color: white;
+}
+
+h1 {
+	font-family: 'Poppins', sans-serif !important;
+	font-size: 100px;
+	font-weight: 700;
+	color: white;
+	text-shadow: 5px 5px #4795bd;
+	letter-spacing: normal;
+}
+
+h2 {
+	font-family: 'Poppins', sans-serif !important;
+	font-size: 40px;
+	font-weight: 700;
+	color: white;
+	text-shadow: 5px 5px #4795bd;
+	letter-spacing: normal;
+}
+
+h5 {
+	text-align: center;
+	font-weight: 700;
+	font-size: 30px;
+	padding-bottom: 20px;
+	padding-top: 10px;
+}
+
+i {
+	color: white;
+	font-size: 40px;
+	padding: 30px 15px 4px 15px;
+}
+
+.modalBtn {
+	float: right;
+	padding-top: 20px;
+}
+
+.alt-icons {
+	visibility: hidden;
+	float: right;
+	margin-top: -300px;
+	margin-right: 20%;
+}
+
+.alt-icons li {
+	list-style-type: none;
+}
+
+.landing-logo {
+	float: left;
+}
+
+.landing-info {
+	margin-left: 60%;
+	margin-right: 6%;
+	margin-top: 10%;
+}
+
+.navbox a span {
+	font-family: 'Poppins', sans-serif !important;
+	font-size: 18px;
+	border: 2px solid white;
+	border-radius: 8px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.navbox {
+	font-family: 'Poppins', sans-serif !important;
+	padding-top: 5px;
+	padding-right: 40px;
+}
+
+.butn {
+	font-family: 'Poppins', sans-serif !important;
+	-webkit-border-radius: 8;
+	-moz-border-radius: 8;
+	border: 2px solid #e52020;
+	border-radius: 8px;
+	color: #ffffff;
+	font-size: 26px;
+	font-weight: 700;
+	background: #e52020;
+	padding: 10px 160px 10px 160px;
+	text-decoration: none;
+}
+
+.butn:hover {
+	text-decoration: none;
+	cursor: pointer;
+	background: #d11d1d;
+}
+
+#brandLogo {
+	width: 70%;
+	height: auto;
+	margin-left: 10%;
+	margin-top: 3%;
+	z-index: -1;
+}
+
+/* --------- Start of media queries --------- */
+
+@media (min-width: 2880px) {
+}
+
+@media (max-width: 1600px) {
+	#brandLogo {
+		padding-top: 10%;
+		width: 80%;
+		height: auto;
+		margin-left: 10%;
+		margin-top: 4%;
+		z-index: -1;
+	}
+
+	h1 {
+		padding-top: 20%;
+		font-size: 80px;
+		font-weight: 700;
+	}
+
+	h2 {
+		font-size: 30px;
+		font-weight: 700;
+	}
+
+	.butn {
+		font-size: 26px;
+		padding: 10px 120px 10px 120px;
+	}
+}
+
+@media (max-width: 1400px) {
+	#brandLogo {
+		padding-top: 10%;
+		width: 80%;
+		height: auto;
+		margin-left: 10%;
+		margin-top: 4%;
+		z-index: -1;
+	}
+
+	h1 {
+		padding-top: 30%;
+		font-size: 70px;
+	}
+
+	.butn {
+		font-size: 24px;
+		padding: 10px 100px 10px 100px;
+	}
+}
+
+@media (max-width: 1060px) {
+	#brandLogo {
+		padding-top: 13%;
+		width: 80%;
+		height: auto;
+		margin-left: 40%;
+		margin-top: -10%;
+		z-index: -1;
+	}
+
+	h1 {
+		padding-top: 5%;
+		font-size: 65px;
+	}
+
+	#sml-scrn {
+		padding-left: 10%;
+		margin-top: -8%;
+	}
+
+	.sml-icons {
+		visibility: hidden;
+	}
+
+	.sml-butn {
+	}
+
+	.butn {
+		font-size: 24px;
+		padding: 10px 80px 10px 80px;
+	}
+
+	.navbox {
+		padding-top: 5px;
+		padding-right: 2px;
+	}
+
+	.navbox a span {
+		font-size: 14px;
+		padding-top: 2px;
+		padding-bottom: 2px;
+		padding-left: 8px;
+		padding-right: 8px;
+	}
+
+	.alt-icons {
+		visibility: visible;
+	}
+}
+
+@media (max-width: 1026px) {
+}
+
+@media screen and (max-width: 800px) {
+}
+
+@media (max-width: 576px) {
+}
