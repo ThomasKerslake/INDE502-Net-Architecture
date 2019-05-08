@@ -1,13 +1,16 @@
+//Overlay timeout function
 setTimeout(function() {
 	$('.overlay').fadeOut();
 }, 2200);
 
+//Background movement
 $('body').mousemove(function(e) {
 	var moveX = e.pageX * -1 / 30;
 	var moveY = e.pageY * -1 / 30;
 	$(this).css('background-position', moveX + 'px ' + moveY + 'px');
 });
 
+//Side menu / Nav control
 function openSideMenu() {
 	document.getElementById('menu').style.width = '100px';
 	document.getElementById('nav-container').style.width = '100px';
@@ -18,6 +21,7 @@ function closeSideMenu() {
 	document.getElementById('nav-container').style.width = '0';
 }
 
+//Dragging notes
 dragElement(document.getElementById('mydiv'));
 
 function dragElement(elmnt) {
@@ -55,6 +59,7 @@ function dragElement(elmnt) {
 		// set the element's new position:
 		elmnt.style.top = elmnt.offsetTop - pos2 + 'px';
 		elmnt.style.left = elmnt.offsetLeft - pos1 + 'px';
+		console.log(pos3, pos4);
 	}
 
 	function closeDragElement() {

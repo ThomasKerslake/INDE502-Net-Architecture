@@ -52,10 +52,10 @@
     <a href="#"><img src="./images/PopNav.png" class="sideBtn" alt="The Pop logo."></a>
   </div>
   <div class="container">
-    <a href="#"><img src="./images/Connectbtn.png" class="sideBtn" id="Connectbtn" alt="Connect with others"></a>
+    <a href="#" data-toggle="modal" data-target="#connectModal"><img src="./images/Connectbtn.png" class="sideBtn" id="Connectbtn" alt="Connect with others"></a>
   </div>
   <div class="container">
-    <a href="#"><img src="./images/Groupbtn.png" class="sideBtn" id="Groupbtn" alt="Create a group"></a>
+    <a href="#" data-toggle="modal" data-target="#groupModal"><img src="./images/Groupbtn.png" class="sideBtn" id="Groupbtn" alt="Create a group"></a>
   </div>
   <div class="container">
     <a href="#"><img src="./images/Notebtn.png" class="sideBtn" id="Notebtn" alt="Personal notes"></a>
@@ -68,18 +68,86 @@
 </div>
 
   <div class="addNewPop">
-    <a href="#"><img src="./images/PlusbtnBig.png"  alt="Plus button"></a>
+    <a href="#"><img src="./images/PlusbtnBig.png" id="newNote" alt="Plus button"></a>
   </div>
 
 
   <div id="mydiv">
       <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
-      <div id="mydivheader"><img src="./images/blob2.svg"  alt="Plus button"></div>
+      <div id="mydivheader">
+          <svg width="513" height="482" xmlns="http://www.w3.org/2000/svg">
+            <g>
+             <rect fill="none" id="canvas_background" height="484" width="515" y="-1" x="-1"/>
+            </g>
+            <g>
+             <g id="svg_1">
+              <path id="svg_2" fill="#fcb900" d="m403.445058,11.3c41.2,8.7 78.3,41.7 91.2,82.2c12.9,40.4 1.7,88.3 -6.8,135.5c-8.5,47.2 -14.2,93.8 -36.5,134.2c-22.2,40.5 -61,74.9 -107.6,93.7c-46.6,18.8 -101,22 -139.9,-1.6c-38.8,-23.5 -62,-73.8 -93.7,-114.4c-31.6,-40.6 -71.8,-71.6 -89.1,-113.2c-17.3,-41.6 -11.8,-93.7 13,-132.5c24.8,-38.8 68.9,-64.2 111.6,-72.2c42.8,-8 84.3,1.5 127.7,-1.6c43.4,-3.1 88.8,-18.7 130.1,-10.1z"/>
+             </g>
+            </g>
+           </svg>
     </div>
+  </div>
 
-<!-------------------------Modal--------------------------->
+<!-------------------------Modals--------------------------->
+
+<!-- Modal Groups -->
+<div class="modal fade" id="groupModal" tabindex="-1" role="dialog" aria-labelledby="groupModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <div class="modal-body">
+        <h5 class="modal-title" id="groupModalTitle"><img src="./images/Groupbtn.png"> Groups</h5>
+        <form>
+          <div class="form-group">
+            <label for="User-Name" class="col-form-label">Username:</label>
+            <input type="text" class="form-control" id="User-Name">
+          </div>
+          <div class="form-group">
+            <label for="User-Email" class="col-form-label">Email:</label>
+            <input type="text" class="form-control" id="User-Email">
+          </div>
+          <div class="form-group">
+            <label for="User-Pass" class="col-form-label">Password:</label>
+            <input type="text" class="form-control" id="User-Pass">
+          </div>
+        </form>
+        <div class="modalBtn">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancle</button>
+        <button type="button" class="btn btn-success">Sign up!</button>
+      </div>
+      </div>   
+    </div>
+  </div>
+</div>
 
 
+<!-- Modal Connect -->
+<div class="modal fade" id="connectModal" tabindex="-1" role="dialog" aria-labelledby="connectModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <div class="modal-body">
+        <h5 class="modal-title" id="connectModalTitle"><img src="./images/Connectbtn.png"> Connect</h5>
+        <form>
+          <div class="form-group">
+            <label for="User-Name" class="col-form-label">Username:</label>
+            <input type="text" class="form-control" id="User-Name">
+          </div>
+          <div class="form-group">
+            <label for="User-Email" class="col-form-label">Email:</label>
+            <input type="text" class="form-control" id="User-Email">
+          </div>
+          <div class="form-group">
+            <label for="User-Pass" class="col-form-label">Password:</label>
+            <input type="text" class="form-control" id="User-Pass">
+          </div>
+        </form>
+        <div class="modalBtn">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancle</button>
+        <button type="button" class="btn btn-success">Sign up!</button>
+      </div>
+      </div>   
+    </div>
+  </div>
+</div>
   
     <script src="js/sketch.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
