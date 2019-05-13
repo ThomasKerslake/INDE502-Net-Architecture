@@ -110,10 +110,10 @@ i {
 	transition: .3s ease;
 	opacity: 0;
 	position: absolute;
-	left: 85%;
-	top: 50%;
+	top: 45%;
 	transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
+	cursor: pointer;
 }
 
 .optionBtn div:nth-child(1) {
@@ -125,6 +125,156 @@ i {
 .optionBtn div:nth-child(3) {
 	margin-top: 10px;
 }
+
+.textCont {
+	position: absolute;
+	top: 30%;
+	left: 20%;
+	display: block;
+	width: 70%;
+	text-align: center;
+	font-size: 34px;
+	color: white;
+}
+
+.resize-drag {
+	color: white;
+	margin: 10px 10px;
+	width: 400px;
+}
+
+.resize-container {
+	width: 95%;
+	height: 90%;
+}
+
+/*---------ModalCSS------------ */
+
+.topBtns {
+	text-align: center;
+}
+
+#contBtns {
+	width: 8%;
+	height: 8%;
+	margin-left: 10px;
+}
+
+.groupName {
+	border: 3px;
+	border-color: black;
+}
+
+#Group-Name {
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.linkedUser {
+	font-family: 'Poppins', sans-serif !important;
+	-webkit-border-radius: 8;
+	-moz-border-radius: 8;
+	border: 2px solid #a5a5a6;
+	border-radius: 8px;
+	color: #ffffff;
+	font-size: 26px;
+	font-weight: 700;
+	background: #a5a5a6;
+	padding: 10px 130px 10px 130px;
+	text-decoration: none;
+	margin: 20px;
+}
+
+.linkedUser:hover {
+	text-decoration: none;
+	cursor: pointer;
+	background: #9b9b9b;
+}
+
+/* The container */
+.Rcontainer {
+	display: in-line;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 22px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.Rcontainer input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	border-radius: 50%;
+}
+
+.checkmark:nth-child(n + 3) {
+	background-color: #4286f4;
+}
+.checkmark:nth-child(2) {
+	background-color: #41f49d;
+}
+.checkmark:nth-child(3) {
+	background-color: #f4414f;
+}
+.checkmark:nth-child(4) {
+	background-color: #fcee32;
+}
+
+/* On mouse-over, add a grey background color */
+.Rcontainer:hover input ~ .checkmark {
+	opacity: 0.7;
+}
+
+/* When the radio button is checked, add a blue background */
+.Rcontainer input:checked ~ .checkmark {
+	background-color: #000;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.Rcontainer input:checked ~ .checkmark:after {
+	display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.Rcontainer .checkmark:after {
+	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+.RadioCont {
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+/*--------------------------------------------------*/
 
 #newNote {
 	z-index: 5;
@@ -143,11 +293,11 @@ i {
 	z-index: 1;
 }
 
-#popNote:hover .moveBtn {
+.resize-drag:hover .moveBtn {
 	opacity: 1;
 }
 
-#popNote:hover .optionBtn {
+.resize-drag:hover .optionBtn {
 	opacity: 1;
 }
 

@@ -21,53 +21,33 @@ function closeSideMenu() {
 	document.getElementById('nav-container').style.width = '0';
 }
 
-//Dragging notes
-dragElement(document.getElementById('popNote'));
+interact('.resize-drag').draggable({
+	// enable inertial throwing
+	inertia: true,
+	// keep the element within the area of it's parent
+	modifiers: [
+		interact.modifiers.restrict({
+			restriction: 'parent',
+			endOnly: true,
+			elementRect: { top: 0, left: 0, bottom: 1, right: 1 }
+		})
+	],
+	// enable autoScroll
+	autoScroll: true,
 
-function dragElement(popElmnt) {
-	var pos1 = 0,
-		pos2 = 0,
-		pos3 = 0,
-		pos4 = 0;
-	if (document.getElementById(popElmnt.id + 'header')) {
-		// if present, the header is where you move the DIV from:
-		document.getElementById(popElmnt.id + 'header').onmousedown = dragMouseDown;
-	} else {
-		// otherwise, move the DIV from anywhere inside the DIV:
-		popElmnt.onmousedown = dragMouseDown;
-	}
+	onmove: window.dragMoveListener
+});
 
-	function dragMouseDown(e) {
-		e = e || window.event;
-		e.preventDefault();
-		// get the mouse cursor position at startup:
-		pos3 = e.clientX;
-		pos4 = e.clientY;
-		document.onmouseup = closeDragElement;
-		// call a function whenever the cursor moves:
-		document.onmousemove = elementDrag;
-	}
+function dragMoveListener(event) {
+	var target = event.target,
+		// keep the dragged position in the data-x/data-y attributes
+		x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
+		y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
 
-	function elementDrag(e) {
-		e = e || window.event;
-		e.preventDefault();
-		// calculate the new cursor position:
-		pos1 = pos3 - e.clientX;
-		pos2 = pos4 - e.clientY;
-		pos3 = e.clientX;
-		pos4 = e.clientY;
-		// set the element's new position:
-		popElmnt.style.top = popElmnt.offsetTop - pos2 + 'px';
-		popElmnt.style.left = popElmnt.offsetLeft - pos1 + 'px';
-		if ((popElmnt.style.top = -102)) {
-			popElmnt.style.top - 20;
-		}
-		console.log(pos3, pos4);
-	}
+	// translate the element
+	target.style.webkitTransform = target.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
 
-	function closeDragElement() {
-		// stop moving when mouse button is released:
-		document.onmouseup = null;
-		document.onmousemove = null;
-	}
+	// update the posiion attributes
+	target.setAttribute('data-x', x);
+	target.setAttribute('data-y', y);
 }
