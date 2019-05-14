@@ -38,6 +38,15 @@ interact('.resize-drag').draggable({
 	onmove: window.dragMoveListener
 });
 
+interact('#svg_2').on('hold', function(event) {
+	event.currentTarget.classList.toggle('large');
+	event.preventDefault();
+
+	setTimeout(function() {
+		event.currentTarget.remove();
+	}, 2000);
+});
+
 function dragMoveListener(event) {
 	var target = event.target,
 		// keep the dragged position in the data-x/data-y attributes
@@ -50,4 +59,11 @@ function dragMoveListener(event) {
 	// update the posiion attributes
 	target.setAttribute('data-x', x);
 	target.setAttribute('data-y', y);
+}
+
+function moveLoad() {
+	document.getElementById('111').style.webkitTransform = 'translate(' + 0 + 'px, ' + 0 + 'px)';
+	document.getElementById('222').style.webkitTransform = 'translate(' + 0 + 'px, ' + 0 + 'px)';
+	document.getElementById('333').style.webkitTransform = 'translate(' + 0 + 'px, ' + 0 + 'px)';
+	document.getElementById('444').style.webkitTransform = 'translate(' + 0 + 'px, ' + 0 + 'px)';
 }

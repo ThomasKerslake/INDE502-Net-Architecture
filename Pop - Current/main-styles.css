@@ -8,6 +8,14 @@ html {
 	height: 100%;
 }
 
+svg {
+	transform: scale(0.9);
+}
+
+svg:not(:root) {
+	overflow: visible;
+}
+
 body {
 	background-color: #35a0e1;
 	background-image: url("images/BgBlobs2.png");
@@ -141,6 +149,7 @@ i {
 	color: white;
 	margin: 10px 10px;
 	width: 400px;
+	position: absolute;
 }
 
 .resize-container {
@@ -272,6 +281,12 @@ i {
 	text-align: center;
 	margin-top: 10px;
 	margin-bottom: 10px;
+}
+
+#svg_2.large {
+	-webkit-transform: scale(1.5);
+	transform: scale(1.5);
+	transition: 1.5s;
 }
 
 /*--------------------------------------------------*/
