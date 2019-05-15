@@ -284,9 +284,9 @@ i {
 }
 
 #svg_2.large {
-	-webkit-transform: scale(1.5);
-	transform: scale(1.5);
-	transition: 1.5s;
+	-webkit-transform: scale(1.6);
+	transform: scale(1.6);
+	transition: 3s;
 }
 
 /*--------------------------------------------------*/

@@ -11,20 +11,21 @@ $('body').mousemove(function(e) {
 });
 
 //Side menu / Nav control
+//Open
 function openSideMenu() {
 	document.getElementById('menu').style.width = '100px';
 	document.getElementById('nav-container').style.width = '100px';
 }
-
+//close
 function closeSideMenu() {
 	document.getElementById('menu').style.width = '0';
 	document.getElementById('nav-container').style.width = '0';
 }
 
+//Using Interact.js to move individual elements
 interact('.resize-drag').draggable({
-	// enable inertial throwing
 	inertia: true,
-	// keep the element within the area of it's parent
+	// Stopping the SVG's from moving out of they parent element
 	modifiers: [
 		interact.modifiers.restrict({
 			restriction: 'parent',
@@ -32,35 +33,39 @@ interact('.resize-drag').draggable({
 			elementRect: { top: 0, left: 0, bottom: 1, right: 1 }
 		})
 	],
-	// enable autoScroll
 	autoScroll: true,
 
 	onmove: window.dragMoveListener
 });
 
 interact('#svg_2').on('hold', function(event) {
-	event.currentTarget.classList.toggle('large');
+	var selectedTarget = event.currentTarget;
+	selectedTarget.classList.toggle('large');
 	event.preventDefault();
+});
 
+interact('.resize-drag').on('hold', function(event) {
 	setTimeout(function() {
-		event.currentTarget.remove();
+		var selectedTarget2 = event.currentTarget;
+		selectedTarget2.remove();
 	}, 2000);
 });
 
 function dragMoveListener(event) {
 	var target = event.target,
-		// keep the dragged position in the data-x/data-y attributes
+		// Store the moved position any targeted attribute
 		x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
 		y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
 
-	// translate the element
+	// Move the the element to the new position
 	target.style.webkitTransform = target.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
 
-	// update the posiion attributes
+	// update the posiion of each targeted SVG
 	target.setAttribute('data-x', x);
 	target.setAttribute('data-y', y);
 }
 
+// Position bug work around
 function moveLoad() {
 	document.getElementById('111').style.webkitTransform = 'translate(' + 0 + 'px, ' + 0 + 'px)';
 	document.getElementById('222').style.webkitTransform = 'translate(' + 0 + 'px, ' + 0 + 'px)';
