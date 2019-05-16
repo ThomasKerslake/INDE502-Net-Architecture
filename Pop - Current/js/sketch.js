@@ -40,6 +40,12 @@ interact('.resize-drag').draggable({
 
 interact('#svg_2').on('hold', function(event) {
 	var selectedTarget = event.currentTarget;
+	var expAudio = document.getElementById('expAudio');
+	expAudio.play();
+	setTimeout(function() {
+		var popAudio = document.getElementById('popAudio');
+		popAudio.play();
+	}, 1000);
 	selectedTarget.classList.toggle('large');
 	event.preventDefault();
 });
@@ -47,7 +53,7 @@ interact('#svg_2').on('hold', function(event) {
 interact('.resize-drag').on('hold', function(event) {
 	setTimeout(function() {
 		var selectedTarget2 = event.currentTarget;
-		selectedTarget2.remove();
+		selectedTarget2.innerHTML = '';
 	}, 2000);
 });
 

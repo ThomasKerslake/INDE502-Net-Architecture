@@ -286,6 +286,7 @@ i {
 #svg_2.large {
 	-webkit-transform: scale(1.6);
 	transform: scale(1.6);
+	transform-origin: center;
 	transition: 3s;
 }
 
