@@ -50,6 +50,13 @@ h2 {
 	letter-spacing: normal;
 }
 
+h3 {
+	text-align: center;
+	font-weight: 700;
+	font-size: 20px;
+	margin-top: 20px;
+}
+
 h5 {
 	text-align: center;
 	font-weight: 700;
@@ -145,19 +152,27 @@ i {
 	color: white;
 }
 
-.resize-drag {
+.dragSVG {
 	color: white;
 	margin: 10px 10px;
 	width: 400px;
 	position: absolute;
 }
 
-.resize-container {
+.dragContainer {
 	width: 95%;
 	height: 90%;
 }
 
-/*---------ModalCSS------------ */
+.dragSVG:hover .moveBtn {
+	opacity: 1;
+}
+
+.dragSVG:hover .optionBtn {
+	opacity: 1;
+}
+
+/*-----------------------ModalCSS------------------------- */
 
 .topBtns {
 	text-align: center;
@@ -174,10 +189,21 @@ i {
 	border-color: black;
 }
 
-#Group-Name {
+.inputCont {
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#groupName {
 	text-align: center;
 	margin-top: 20px;
 	margin-bottom: 20px;
+}
+
+.groupModalBtn {
+	text-align: center;
+	margin-top: 7%;
 }
 
 .linkedUser {
@@ -190,7 +216,8 @@ i {
 	font-size: 26px;
 	font-weight: 700;
 	background: #a5a5a6;
-	padding: 10px 130px 10px 130px;
+	padding: 3px 0px 3px 0px;
+	width: 70%;
 	text-decoration: none;
 	margin: 20px;
 }
@@ -232,17 +259,25 @@ i {
 	border-radius: 50%;
 }
 
-.checkmark:nth-child(n + 3) {
-	background-color: #4286f4;
+#Color1 {
+	background-color: #c9edff;
 }
-.checkmark:nth-child(2) {
+#Color2 {
 	background-color: #41f49d;
 }
-.checkmark:nth-child(3) {
+#Color3 {
+	background-color: #fcee32;
+}
+#Color4 {
 	background-color: #f4414f;
 }
-.checkmark:nth-child(4) {
-	background-color: #fcee32;
+
+#Color5 {
+	background-color: #813ad8;
+}
+
+#Color6 {
+	background-color: #ff77fa;
 }
 
 /* On mouse-over, add a grey background color */
@@ -283,14 +318,25 @@ i {
 	margin-bottom: 10px;
 }
 
+#removeUser {
+	color: #000;
+}
+
+#removeUser:hover {
+	color: red;
+	cursor: pointer;
+	transform: scale(1.1);
+	transition: .1s;
+}
+
+/*------------------------------EndModal---------------------------------*/
+
 #svg_2.large {
 	-webkit-transform: scale(1.6);
 	transform: scale(1.6);
 	transform-origin: center;
 	transition: 3s;
 }
-
-/*--------------------------------------------------*/
 
 #newNote {
 	z-index: 5;
@@ -307,14 +353,6 @@ i {
 #popNote {
 	position: absolute;
 	z-index: 1;
-}
-
-.resize-drag:hover .moveBtn {
-	opacity: 1;
-}
-
-.resize-drag:hover .optionBtn {
-	opacity: 1;
 }
 
 #popNoteheader {
