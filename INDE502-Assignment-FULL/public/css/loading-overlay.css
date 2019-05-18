@@ -1,0 +1,119 @@
+.overlay {
+	position: fixed; /* Sit on top of the page content */
+	width: 100%; /* Full width (cover the whole page) */
+	height: 100%; /* Full height (cover the whole page) */
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #35a0e1; /* Black background with opacity */
+	z-index: 12; /* Specify a stack order in case you're using a different order for other elements */
+}
+
+.wrap {
+	margin-top: 23em;
+}
+
+.text {
+	margin-top: 30%;
+	text-align: center;
+}
+
+#loading-text {
+	width: 70%;
+	height: 70%;
+}
+
+.ring-2 {
+	position: relative;
+	width: 225px;
+	height: 225px;
+	margin: 0 auto;
+	border: 4px solid #0167a8;
+	background: #0167a8;
+	border-radius: 100%;
+}
+
+.ball-holder-1,
+.ball-holder-2,
+.ball-holder-3 {
+	position: absolute;
+	width: 200px;
+	height: 245px;
+	left: 17px;
+	top: 0px;
+}
+
+.ball {
+	position: absolute;
+	top: -41px;
+	left: 50px;
+	width: 26px;
+	height: 26px;
+	border-radius: 100%;
+	background: #ffd623;
+}
+
+.ball-2 {
+	position: absolute;
+	top: -61px;
+	left: 120px;
+	width: 46px;
+	height: 46px;
+	border-radius: 100%;
+	background: #8fc93a;
+}
+
+.ball-3 {
+	position: absolute;
+	top: -31px;
+	left: 190px;
+	width: 66px;
+	height: 66px;
+	border-radius: 100%;
+	background: #ff960c;
+}
+
+.load-4 .ring-1 {
+	animation: loadingD 1.5s .3s cubic-bezier(.17, .37, .43, .67) infinite;
+}
+.load-5 .ball-holder-1 {
+	animation: loadingE 1.6s ease-in-out infinite;
+}
+.load-5 .ball-holder-2 {
+	animation: loadingE 1.6s ease-in-out infinite;
+}
+.load-5 .ball-holder-3 {
+	animation: loadingE 1.6s ease-in-out infinite;
+}
+
+.load-5 .ball-holder-1 {
+	animation-delay: .4s;
+}
+.load-5 .ball-holder-2 {
+	animation-delay: .3s;
+}
+.load-5 .ball-holder-3 {
+	animation-delay: .2s;
+}
+
+@keyframes loadingE {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes loadingD {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(180deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
