@@ -18,10 +18,9 @@ svg:not(:root) {
 
 body {
 	background-color: #35a0e1;
-	background-image: url("/images/BgBlobs2.png");
+	background-image: url("/images/BgBlobs3.png");
 	height: 100vh;
 	background-position: center;
-	background-repeat: no-repeat;
 	background-size: cover;
 	font-family: 'Poppins', sans-serif !important;
 	overflow-x: hidden;
@@ -90,23 +89,6 @@ i {
 	margin-top: 10%;
 }
 
-.navbox a span {
-	font-family: 'Poppins', sans-serif !important;
-	font-size: 18px;
-	border: 2px solid white;
-	border-radius: 8px;
-	padding-top: 2px;
-	padding-bottom: 2px;
-	padding-left: 10px;
-	padding-right: 10px;
-}
-
-.navbox {
-	font-family: 'Poppins', sans-serif !important;
-	padding-top: 5px;
-	padding-right: 40px;
-}
-
 .butn {
 	font-family: 'Poppins', sans-serif !important;
 	-webkit-border-radius: 8;
@@ -133,6 +115,13 @@ i {
 	margin-left: 10%;
 	margin-top: 3%;
 	z-index: -1;
+}
+
+#iconBR {
+	font-size: 50px;
+	color: white;
+	margin-right: 30px;
+	margin-left: 30px;
 }
 
 .accountLabels {
@@ -180,6 +169,16 @@ i {
 .nav a:hover {
 	transform: scale(1.1);
 	transition: .1s;
+}
+
+.navLogo {
+	display: block;
+	padding-left: 5px;
+	font-size: 25px;
+	text-decoration: none;
+	color: white;
+	max-width: 85%;
+	max-height: 85%;
 }
 
 .close {
@@ -250,6 +249,10 @@ i {
 
 .dragSVG:hover .optionBtn {
 	opacity: 1;
+}
+
+.redirectText {
+	margin-top: 10px;
 }
 
 /*-----------------------ModalCSS------------------------- */
@@ -437,6 +440,16 @@ i {
 	max-height: 85%;
 }
 
+#activeBtn {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+
+#logoutText {
+	font-size: 14px;
+	text-align: center;
+}
+
 /* --------- Start of media queries --------- */
 
 @media (min-width: 2880px) {
@@ -514,9 +527,6 @@ i {
 		visibility: hidden;
 	}
 
-	.sml-butn {
-	}
-
 	.butn {
 		font-size: 24px;
 		padding: 10px 80px 10px 80px;
@@ -544,7 +554,34 @@ i {
 }
 
 @media screen and (max-width: 800px) {
+	.textCont {
+		position: absolute;
+		top: 38%;
+		left: 20%;
+		display: block;
+		width: 50%;
+		text-align: center;
+		font-size: 24px;
+		color: white;
+	}
+	svg {
+		transform: scale(0.7);
+	}
+	.alt-icons {
+		visibility: hidden;
+	}
+	.sml-icons {
+		visibility: visible;
+	}
+	.addNewPop {
+		margin-right: -50%;
+		transform: scale(0.6);
+	}
 }
 
 @media (max-width: 576px) {
+	.addNewPop {
+		margin-right: -50%;
+		transform: scale(0.5);
+	}
 }
